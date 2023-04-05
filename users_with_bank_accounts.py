@@ -21,11 +21,16 @@ class User:
     def display_user_balance(self):
         self.account.display_account_info()
         return self
+    
+    # # Make new bank account
+    # def make_new_account(self, name, int_rate = 0.02, balance = 0):
+    #     setattr(self, name, BankAccount(int_rate, balance))
+    #     return self
 
 
 # Bank Account Class
 class BankAccount:
-    def __init__(self, int_rate = 0.01, balance = 0):
+    def __init__(self, int_rate = 0.02, balance = 0):
         # Assign attribute values
         self.int_rate = int_rate
         self.balance = balance
@@ -59,3 +64,6 @@ pog = User("K", "k@mail.com")
 pog.make_deposit(50)
 pog.make_withdrawal(20)
 pog.display_user_balance()
+
+# pog.make_new_account("test")
+# pog.display_user_balance("test")
